@@ -1,0 +1,18 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "fix/build-client-directives-and-suspense",
+    "main",
+    "origin"
+  ],
+  "parent": {
+    "fix/build-client-directives-and-suspense": "main",
+    "main": null,
+    "origin": "main"
+  },
+  "order": [
+    "main",
+    "fix/build-client-directives-and-suspense",
+    "origin"
+  ]
+}

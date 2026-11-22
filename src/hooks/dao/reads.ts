@@ -73,6 +73,8 @@ export function useUserData(): UserData {
   })
 
   const m = data?.member
+  const exitShareUnknown = !!m && data?.exitShare == null
+
   return {
     isConnected,
     // `isRestoring` is folded in on purpose (#307). Freighter's `isAllowed()`

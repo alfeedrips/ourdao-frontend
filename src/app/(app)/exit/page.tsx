@@ -21,6 +21,11 @@ import { formatToken } from '@/lib/utils'
 import { AddressLink } from '@/components/AddressLink'
 import { MEMBER_STATUS_LABELS } from '@/constants'
 import { LoadingSpinner } from '@/components/ui/skeleton'
+  const shareBalance = userData.member?.shareBalance ?? null
+  const shareKnown = shareBalance !== null
+  const amountsKnown = shareKnown && stakeKnown
+  const pendingYield = userData.pendingYield ?? BigInt(0)
+  const totalExitAmount = (shareBalance ?? BigInt(0)) + pendingYield + (myStake ?? BigInt(0))
 
 export default function ExitPage() {
   const userData = useUserData()

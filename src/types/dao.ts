@@ -3,7 +3,7 @@ export interface Member {
   status: MemberStatus
   joinDate: number
   contributionAmount: bigint
-  shareBalance: bigint
+  shareBalance: bigint | null
   hasActiveLoan: boolean
   lastLoanDate: number
 }
